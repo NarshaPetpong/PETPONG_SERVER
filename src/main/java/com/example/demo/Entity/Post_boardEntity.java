@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.sql.Date;
 
 @Entity
 @Getter
@@ -24,7 +23,7 @@ public class Post_boardEntity {
     private String writing;
 
     @Column(nullable = false)
-    private Date date;
+    private String date;
 
     @Column(nullable = false)
     private String writer;
