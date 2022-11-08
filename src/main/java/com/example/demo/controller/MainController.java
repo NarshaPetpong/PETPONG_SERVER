@@ -15,7 +15,7 @@ public class MainController {
         this.userRepository = userRepository;
     }
 
-    @PostMapping("/")
+    @PostMapping("/login")
     private String Login(@RequestBody UserEntity user) {
         userRepository.save(user);
         System.out.println("Login 작동");
