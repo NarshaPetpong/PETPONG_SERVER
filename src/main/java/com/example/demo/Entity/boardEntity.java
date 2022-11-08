@@ -1,8 +1,7 @@
 package com.example.demo.Entity;
 
-import lombok.Builder;
 import lombok.Getter;
-import lombok.ToString;
+import lo[mbok.ToString;
 
 import javax.persistence.*;
 
@@ -10,7 +9,7 @@ import javax.persistence.*;
 @Getter
 //@Table(name = "Post_Board")
 @ToString
-public class Post_boardEntity {
+public class boardEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,7 +30,7 @@ public class Post_boardEntity {
     @Column
     private Integer heart;
 
-    public Post_boardEntity() {
+    public boardEntity() {
         this.title = getTitle();
         this.writing = getWriting();
         this.date = getDate();

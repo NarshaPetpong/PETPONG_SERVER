@@ -1,7 +1,9 @@
 package com.example.demo.controller;
 
+import com.example.demo.Entity.boardEntity;
 import com.example.demo.Repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,7 +15,13 @@ public class boardController {
 
     @RequestMapping("/board")
     public String board (){
-        return "board";
+        return postRepository.findAll().toString();
     }
 
+    @RequestMapping("/Writeboard")
+    public boardEntity Writeboard(@RequestBody boardEntity board) {
+        postRepository.save(board);
+
+        return board;
+    }
 }
