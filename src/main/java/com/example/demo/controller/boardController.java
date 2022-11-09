@@ -18,10 +18,9 @@ public class boardController {
         return postRepository.findAll().toString();
     }
 
-    @RequestMapping("/Writeboard")
-    public boardEntity Writeboard(@RequestBody boardEntity board) {
+    @RequestMapping("/writepost")
+    public String Writeboard(@RequestBody boardEntity board) {
         postRepository.save(board);
-
-        return board;
+        return "post_writed";
     }
 }
