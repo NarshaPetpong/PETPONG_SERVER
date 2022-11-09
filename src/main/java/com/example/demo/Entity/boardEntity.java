@@ -1,7 +1,7 @@
 package com.example.demo.Entity;
 
 import lombok.Getter;
-import lo[mbok.ToString;
+import lombok.ToString;
 
 import javax.persistence.*;
 
