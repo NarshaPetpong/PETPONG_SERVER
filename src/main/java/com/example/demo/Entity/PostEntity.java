@@ -9,11 +9,11 @@ import javax.persistence.*;
 @Getter
 //@Table(name = "Post_Board")
 @ToString
-public class boardEntity {
+public class PostEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer post_number;
+    public Integer post_number;
 
     @Column(nullable = false)
     public String title;
@@ -30,7 +30,7 @@ public class boardEntity {
     @Column
     private Integer heart;
 
-    public boardEntity() {
+    public PostEntity() {
         this.title = getTitle();
         this.writing = getWriting();
         this.date = getDate();
