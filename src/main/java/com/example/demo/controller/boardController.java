@@ -21,6 +21,6 @@ public class boardController {
     @RequestMapping("/writepost")
     public String Writeboard(@RequestBody boardEntity board) {
         postRepository.save(board);
-        return "post_writed";
+        return "post_wrote";
     }
 }
