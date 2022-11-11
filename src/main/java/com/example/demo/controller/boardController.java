@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.Entity.boardEntity;
+import com.example.demo.Entity.PostEntity;
 import com.example.demo.Repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,7 +19,7 @@ public class boardController {
     }
 
     @RequestMapping("/writepost")
-    public String Writeboard(@RequestBody boardEntity board) {
+    public String Writeboard(@RequestBody PostEntity board) {
         postRepository.save(board);
         return "post_wrote";
     }
