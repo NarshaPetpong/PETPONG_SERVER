@@ -1,17 +1,16 @@
 package com.example.demo.controller;
 
 import com.example.demo.Entity.UserEntity;
-import com.example.demo.Repository.UserRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-public class MainController {
+public class userController {
 
-    private final UserRepository userRepository;
+    private final com.example.demo.Repository.userRepository userRepository;
 
-    public MainController(UserRepository userRepository) {
+    public userController(com.example.demo.Repository.userRepository userRepository) {
         this.userRepository = userRepository;
     }
 
@@ -33,7 +32,7 @@ public class MainController {
 
     @GetMapping( "/users")
     public @ResponseBody List<UserEntity> GetUser() {
-        return userRepository.findAll();
+        return (List<UserEntity>) userRepository.findAll();
     }
 
 

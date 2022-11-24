@@ -30,6 +30,7 @@ public class UserEntity {
     @Column
     private String certification_number;
 
+    @Builder
     public UserEntity() {
         this.id = getId();
         this.password = getPassword();
