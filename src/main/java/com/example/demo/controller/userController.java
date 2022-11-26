@@ -8,9 +8,9 @@ import java.util.List;
 @RestController
 public class userController {
 
-    private final com.example.demo.Repository.userRepository userRepository;
+    private com.example.demo.Repository.UserRepository userRepository;
 
-    public userController(com.example.demo.Repository.userRepository userRepository) {
+    public userController(com.example.demo.Repository.UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
@@ -34,6 +34,7 @@ public class userController {
     public @ResponseBody List<UserEntity> GetUser() {
         return (List<UserEntity>) userRepository.findAll();
     }
+
 
 
 }
